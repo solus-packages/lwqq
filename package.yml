@@ -1,0 +1,21 @@
+name       : lwqq
+version    : 0.4.3
+release    : 1
+source     :
+    - https://github.com/xiehuc/lwqq/archive/v0.4.3.tar.gz : ac16ff0a77e0d5e83209b396eaa4d0f00c973380006f70b9feec3fcf88d2d957
+license    : GPL-3.0
+component  : programming
+summary    : a library for the webqq protocol
+description: |
+    a libtrary for the webqq protocol
+builddeps  :
+    - pkgconfig(mozjs-17.0)
+    - pkgconfig(sqlite3)
+    - libev-devel
+setup      : |
+    %cmake -DLIB_INSTALL_DIR=lib64 .
+build      : |
+    %make
+install    : |
+    %make_install
+    rm -f $installdir/usr/lib64/*.a
