@@ -1,8 +1,8 @@
 name       : lwqq
-version    : 0.4.3
-release    : 1
+version    : 0.6.1
+release    : 2
 source     :
-    - https://github.com/xiehuc/lwqq/archive/v0.4.3.tar.gz : ac16ff0a77e0d5e83209b396eaa4d0f00c973380006f70b9feec3fcf88d2d957
+    - https://github.com/xiehuc/lwqq/archive/v0.6.1.tar.gz : 9de1c4efa4ddfb7d05654a5740e9743a5e51b71b42acd2e330263939f3fc5cf8
 license    : GPL-3.0
 component  : programming
 summary    : a library for the webqq protocol
@@ -16,6 +16,6 @@ setup      : |
     %cmake -DLIB_INSTALL_DIR=lib64 .
 build      : |
     %make
-install    : |
+install    : |-
     %make_install
-    rm -f $installdir/usr/lib64/*.a
+    rm $installdir/usr/lib64/liblwqq.a

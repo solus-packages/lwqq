@@ -52,6 +52,7 @@ liblwqq.so.0:lwdb_userdb_update_buddy_info
 liblwqq.so.0:lwdb_userdb_update_group_info
 liblwqq.so.0:lwdb_userdb_write
 liblwqq.so.0:lwqq__get_retcode_from_str
+liblwqq.so.0:lwqq__http_check_feature
 liblwqq.so.0:lwqq__parse_retcode_result
 liblwqq.so.0:lwqq__process_empty
 liblwqq.so.0:lwqq__process_simple_response
@@ -67,6 +68,8 @@ liblwqq.so.0:lwqq_async_event_get_conn
 liblwqq.so.0:lwqq_async_event_new
 liblwqq.so.0:lwqq_async_evset_add_event
 liblwqq.so.0:lwqq_async_evset_new
+liblwqq.so.0:lwqq_async_evset_unref
+liblwqq.so.0:lwqq_async_global_init
 liblwqq.so.0:lwqq_async_global_quit
 liblwqq.so.0:lwqq_async_implement
 liblwqq.so.0:lwqq_async_init
@@ -98,6 +101,7 @@ liblwqq.so.0:lwqq_discu_add_buddy
 liblwqq.so.0:lwqq_discu_add_group_member
 liblwqq.so.0:lwqq_discu_mem_change_free
 liblwqq.so.0:lwqq_discu_mem_change_new
+liblwqq.so.0:lwqq_features
 liblwqq.so.0:lwqq_free_extension
 liblwqq.so.0:lwqq_get_http_handle
 liblwqq.so.0:lwqq_get_version
@@ -116,12 +120,14 @@ liblwqq.so.0:lwqq_historymsg_list
 liblwqq.so.0:lwqq_http_cancel
 liblwqq.so.0:lwqq_http_cleanup
 liblwqq.so.0:lwqq_http_create_default_request
+liblwqq.so.0:lwqq_http_get_as_ev
 liblwqq.so.0:lwqq_http_get_cookie
 liblwqq.so.0:lwqq_http_get_url
 liblwqq.so.0:lwqq_http_global_free
 liblwqq.so.0:lwqq_http_global_init
 liblwqq.so.0:lwqq_http_handle_free
 liblwqq.so.0:lwqq_http_handle_new
+liblwqq.so.0:lwqq_http_impl_errstr
 liblwqq.so.0:lwqq_http_is_synced
 liblwqq.so.0:lwqq_http_on_progress
 liblwqq.so.0:lwqq_http_proxy_apply
@@ -184,6 +190,9 @@ liblwqq.so.0:lwqq_logout
 liblwqq.so.0:lwqq_make_cookie_extension
 liblwqq.so.0:lwqq_msg_check_lost
 liblwqq.so.0:lwqq_msg_check_member_chg
+liblwqq.so.0:lwqq_msg_content_clean
+liblwqq.so.0:lwqq_msg_ext_to_string
+liblwqq.so.0:lwqq_msg_fill_ext
 liblwqq.so.0:lwqq_msg_fill_upload_cface
 liblwqq.so.0:lwqq_msg_fill_upload_offline_file
 liblwqq.so.0:lwqq_msg_fill_upload_offline_pic
